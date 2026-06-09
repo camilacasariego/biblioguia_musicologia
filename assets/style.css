@@ -1,0 +1,47 @@
+:root{
+  --bg: #f7f7f9;
+  --card: #ffffff;
+  --accent: #2b6cb0;
+  --muted:#555;
+}
+*{box-sizing:border-box}
+html, body{min-height:100%;width:100%;margin:0;padding:0;}
+html{background:#f7f7f9 url("images/Gros-Davidplayinghis-.jpg") center -350px / 100% auto no-repeat;}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#111;overflow-x:hidden;position:relative;background:none;}
+.container{max-width:900px;margin:2rem auto;padding:2rem;background:rgba(255,255,255,0.8);border-radius:10px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+.site-header{background:rgba(255,255,255,0.95);padding:2rem .25rem;border-bottom:1px solid rgba(223,231,240,0.85);box-shadow:0 10px 45px rgba(46,84,135,.05);position:relative}
+.header-top{display:flex;justify-content:flex-start;gap:.8rem;align-items:center;flex-wrap:wrap;padding:0 .5rem}
+.brand-side{display:flex;flex-direction:row;align-items:center;gap:.4rem}
+.logo{width:64px;height:64px;min-width:64px;background:transparent;border:none;border-radius:0;display:grid;place-items:center;box-shadow:none}
+.logo svg{width:36px;height:36px;fill:var(--accent)}
+.header-main{flex:1;min-width:300px;padding-left:1rem;border-left:1px solid #dfe7f0;min-height:50px;display:flex;flex-direction:column;justify-content:center}
+.site-title{margin:0 0 .6rem;font-size:2rem;height:50px;line-height:50px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-identity{display:flex;flex-direction:column;align-items:flex-start;gap:.05rem;margin:0;text-align:left}
+.brand-name,.brand-location{margin:0;color:var(--accent);font-weight:700}
+.brand-name{font-size:.65rem;letter-spacing:.02em}
+.brand-location{font-size:.56rem;opacity:.9;letter-spacing:.01em}
+.site-desc{margin:0;color:var(--muted);max-width:760px;line-height:1.5}
+.resources details{background:var(--card);margin:1rem 0;padding:1rem;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+summary{font-weight:600;cursor:pointer;outline:none}
+.resource-list{margin-top:.8rem;display:flex;flex-direction:column;gap:.8rem}
+.resource{display:flex;gap:.8rem;align-items:center;padding:.6rem;border-radius:6px;border:1px solid #eef3f7}
+.resource-img{width:96px;height:64px;object-fit:cover;border-radius:4px;background:#f0f2f4}
+.resource-content{flex:1}
+.resource-title{margin:0 0 .25rem;font-size:1.05rem}
+.resource-title a{color:var(--accent);text-decoration:none}
+.resource-desc{margin:0;color:var(--muted);font-size:.95rem}
+.resources-desc{margin:0 auto .9rem;color:var(--muted);font-size:1rem;line-height:1.7;max-width:760px;text-align:justify}
+.resources-items{margin:0 auto 1rem;padding:0;padding-left:1.2rem;color:var(--muted);font-size:1rem;line-height:1.7;max-width:760px}
+.resources-items li{margin:.3rem 0;font-size:.95rem}
+.resources-items li::marker{font-size:.85rem;}
+.site-footer{display:flex;flex-direction:column;align-items:center;gap:.75rem;padding:1rem;color:#fff;font-size:.9rem;text-align:center}
+.footer-credit{display:inline-block;background:rgba(255,255,255,0.8);color:#111;padding:.75rem 1rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.08);text-align:center;align-self:center}
+.footer-copy{width:100%}
+
+.site-header::before{display:none}
+.header-top,.site-title,.brand-identity{position:relative;z-index:1}
+
+@media(min-width:700px){
+  .resource{padding:.8rem}
+  .resource-img{width:140px;height:84px}
+}
