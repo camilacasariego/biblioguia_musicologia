@@ -25,8 +25,12 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
 summary{font-weight:600;cursor:pointer;outline:none}
 .resource-list{margin-top:.8rem;display:flex;flex-direction:column;gap:.8rem}
 .resource{display:flex;gap:.8rem;align-items:center;padding:.6rem;border-radius:6px;border:1px solid #eef3f7}
-.resource-img{width:96px;height:64px;object-fit:cover;border-radius:4px;background:#f0f2f4}
+.resource-img{width:96px;max-width:100%;height:auto;object-fit:contain;border-radius:4px;background:#f0f2f4}
 .resource-content{flex:1}
+
+.logo-picker{display:none}
+.logo-select{display:none}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
 .resource-title{margin:0 0 .25rem;font-size:1.05rem}
 .resource-title a{color:var(--accent);text-decoration:none}
 .resource-desc{margin:0;color:var(--muted);font-size:.95rem}
@@ -36,12 +40,32 @@ summary{font-weight:600;cursor:pointer;outline:none}
 .resources-items li::marker{font-size:.85rem;}
 .site-footer{display:flex;flex-direction:column;align-items:center;gap:.75rem;padding:1rem;color:#fff;font-size:.9rem;text-align:center}
 .footer-credit{display:inline-block;background:rgba(255,255,255,0.8);color:#111;padding:.75rem 1rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.08);text-align:center;align-self:center}
-.footer-copy{width:100%}
+.footer-copy{width:100%;display:inline-block;background:rgba(0,0,0,0.55);color:#fff;padding:.75rem 1rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.18);text-align:center;align-self:center}
 
 .site-header::before{display:none}
 .header-top,.site-title,.brand-identity{position:relative;z-index:1}
 
 @media(min-width:700px){
   .resource{padding:.8rem}
-  .resource-img{width:140px;height:84px}
+  .resource-img{width:140px;max-width:30%;height:auto}
+}
+
+@media(max-width:699px){
+  .container{margin:1rem; padding:1.25rem;}
+  .site-header{padding:1.5rem .75rem;}
+  .header-top{flex-direction:column;align-items:flex-start;gap:.6rem;padding:0;}
+  .header-main{min-width:auto;padding-left:0;border-left:none;}
+  .site-title{font-size:1.6rem;line-height:1.25;height:auto;white-space:normal;}
+  .brand-side{width:100%;justify-content:flex-start;}
+  .brand-identity{width:100%;}
+  .resources details{padding:.8rem;}
+  .resource{flex-direction:column;align-items:flex-start;padding:.8rem;}
+  .resource-img{width:100%;max-width:100%;height:auto;}
+  .resource-content{width:100%;}
+  .resource-title{font-size:1rem;}
+  .resource-desc{font-size:.94rem;line-height:1.6;}
+  .resources-desc{font-size:.96rem;line-height:1.7;}
+  .resources-items{padding-left:1rem;}
+  .site-footer{padding:1rem;}
+  .footer-credit,.footer-copy{width:100%;}
 }
